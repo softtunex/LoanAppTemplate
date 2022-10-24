@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import List from './Component/List';
+import NavBar from './Component/NavBar/NavBar';
+import Dashboard from './Page/Dashboard/Dashboard';
+import LoginPage from './Page/LoginPage/LoginPage';
 
+export interface IBoard{
+  dashboard:boolean;
+}
 function App() {
+  const [dashboard,setDashboard]=useState<IBoard["dashboard"]>(true)
+
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {dashboard && <LoginPage dashboard={dashboard} setDashboard = {setDashboard}/>} 
+     <div className="App_section">
+      <NavBar/>
+     {!dashboard && <Dashboard/>}
+
+     </div>
     </div>
   );
 }
