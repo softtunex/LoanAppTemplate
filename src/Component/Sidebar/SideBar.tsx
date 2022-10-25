@@ -1,39 +1,27 @@
 import React from 'react'
-import { Bussinesses, Settings, SwitchOrg } from '../../Data/Data'
 import { CustomersSideBarData } from '../../Data/Data'
+import "./SideBar.scss"
 
 const SideBar = () => {
   return (
     <div>
       <div className="menu">
-        {SwitchOrg.map((item,index)=>{
-          return(
-            <div>
-              <span><item.icon/></span> {item.content}
-            </div>
-          )
-        })}
+        
         {CustomersSideBarData.map((item,index)=>{
           return(
-            <div>
-              <span><item.icon/></span> {item.content}
+            <div className='menu_Data'>
+              <div className='menu_Head'>
+              <p>{item.head}</p>
+
+              </div>
+              <div className='menu_Body'>
+
+              <span><item.icon/></span> <div className='menu_Body_Content'>{item.content}</div>
+              </div>
             </div>
           )
         })}
-        {Bussinesses.map((item,index)=>{
-          return(
-            <div>
-              <span><item.icon/></span> {item.content}
-            </div>
-          )
-        })}
-        {Settings.map((item,index)=>{
-          return(
-            <div>
-              <span><item.icon/></span> {item.content}
-            </div>
-          )
-        })}
+        
       </div>
     </div>
   )

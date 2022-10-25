@@ -17,7 +17,7 @@ function App() {
     <div className="App">
      {dashboard && <LoginPage dashboard={dashboard} setDashboard = {setDashboard}/>} 
      <div className="App_section">
-      <NavBar/>
+      {!dashboard && <NavBar/> }
      {!dashboard && <Dashboard/>}
 
      </div>
