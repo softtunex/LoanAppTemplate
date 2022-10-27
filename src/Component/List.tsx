@@ -8,9 +8,10 @@ interface Iprops{
     }[]
   }
 const List:React.FC<Iprops> = ({person}) => {
-    const renderList = person.map(peep=>{
+    const renderList = person.map((peep,i)=>{
         return(
-                <li>
+                <li key={i}>
+
                     <div>{peep.url}</div>
                     <div>{peep.name}</div>
                     <div>{peep.age}</div>

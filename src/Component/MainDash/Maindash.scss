@@ -1,0 +1,73 @@
+$text: #213f7d;
+$dashBgc: #e5e5e54f;
+.Mdashboard {
+  width: 100%;
+  // overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: $dashBgc;
+  color: $text;
+  padding: 2rem 0 5rem 2rem;
+  height: calc(100vh - 4.5rem);
+  overflow-y: scroll;
+  // padding-bottom: 5rem;
+
+  &_Card {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    &Items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background-color: #fff;
+      width: 23%;
+      padding: 2rem;
+      box-shadow: -1px 16px 26px -3px rgba(0, 0, 0, 0.17);
+
+      &_Icon {
+        width: 2rem;
+        border-radius: 50%;
+        padding: 0.3rem;
+      }
+    }
+  }
+  &_Table {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+    .Mdashboard {
+        padding: 1rem 0 5rem 1rem;
+
+        &_Card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+
+            &Items {
+                margin-bottom: 1rem;
+                width: 100%;
+        
+            }
+    }
+    }
+}
+@media screen and (max-width: 720px) {
+  .Mdashboard {
+
+    &_Card {
+      grid-template-columns: 1fr;
+      margin: 0 0.5rem 0 0;
+      padding: 1rem 0 5rem 0rem;
+
+      &Items {
+        padding: 1rem;
+      }
+    }
+    &_Table {
+      padding: 0;
+    }
+  }
+}

@@ -67,3 +67,37 @@ $bgc:#E5E5E5;
         }
     }
 }
+@media screen and (max-width: 720px) {
+    .loginPage{
+        
+        flex-wrap:nowrap;
+        background-color: #fff;
+        &_Image{
+            display: none;
+        }
+        &_Content{
+        &_Input{
+            gap: 0.5rem;
+            width: 100%;
+
+            input{
+                padding: 0.4rem;
+                outline: none;
+                width: 100%;
+                
+            }
+            .passwordDiv{
+                
+                &_showPass{
+                    font-size: small;
+                    position: absolute;
+                    margin: 0.5rem -2.8rem; 
+                    z-index: 2;
+                    cursor: pointer;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+}

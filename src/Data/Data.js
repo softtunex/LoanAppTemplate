@@ -107,4 +107,35 @@ export const CustomersSideBarData = [
     content:"Audit Logs" 
 },
 ];
+export const CardInfo=[
+    {
+        icon:UilUsersAlt,
+        iconColor:"#DF18FF",
+        iconBgc:"#e018ff30",
+        title:"USERS",
+        total:"2,433"
+    },
+    {
+        icon:UilUserArrows,
+        iconColor:"#5718FF",
+        iconBgc:"#5718FF30",
+        title:"ACTIVE USERS",
+        total:"2,433"
+    },
+    {
+        icon:UilFileContractDollar,
+        iconColor:"#F55F44",
+        iconBgc:"#F55F4430",
+        title:"USERS WITH LOANS",
+        total:"12,433"
+    },
+    {
+        icon:UilCoins,
+        iconColor:"#FF3366",
+        iconBgc:"#FF336630",
+        title:"USERS WITH SAVINGS",
+        total:"102,433"
+    },
+    
+]
 

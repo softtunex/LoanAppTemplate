@@ -1,6 +1,19 @@
 .dashboard{
         display: grid;
         grid-template-columns: 18rem auto;
-        gap: 2rem;
+        padding: 4.5rem 0 0 0;
 
     }
+    @media screen and (max-width: 1024px) {
+        .dashboard{
+            grid-template-columns: 14rem auto;
+    
+        }
+      }
+    @media screen and (max-width: 720px) {
+        .dashboard{
+            grid-template-columns: 4.5rem auto;
+            padding: 2.5rem 0 0 0;
+    
+        }
+      }

@@ -1,10 +1,14 @@
 $text:#213F7D;
 $btn:#39CDCC;
 .navBar{
+    position: fixed;
+    width: 100%;
+    max-height: 16rem;
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.1);
     color: $text;
+    background-color: #fff;
     &_logo{
         display: flex;
         margin: 1rem 0.5rem;
@@ -66,4 +70,42 @@ $btn:#39CDCC;
     .navBar_profile{
     display: none;
    }
+  }
+@media screen and (max-width: 720px) {
+    .navBar{
+        &_logo{
+            margin:  0.6rem 0.4rem;
+            gap: .3rem;
+            span{
+                font-size: 0.7rem;
+            }
+            img{
+                width: 1rem;
+                height: 1rem;
+                
+            }
+        }
+        &_searchbar{
+            &_form{
+                margin: 0.6rem 0.4rem;
+                input{
+                    width: 6rem;
+                    padding: 0.4rem;
+                    border-radius: 0.5rem 0 0 0.5rem;
+                    border: 1px solid gray;
+                    outline: none;
+                }
+                button{
+                    width: 1.5rem;
+                    padding: .49rem;
+                    border-radius: 0 0.5rem 0.5rem 0;
+                    background-color: $btn;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+    
+        }
+    }
   }

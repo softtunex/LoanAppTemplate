@@ -1,12 +1,21 @@
 $text: #213f7d;
 $textMute: #21407d9b;
+$btn:#39cdcd5b;
 $bgBorder: #39cdcd18;
+
 .menu {
   color: $textMute;
   display: flex;
   flex-direction: column;
+  padding-bottom: 5rem;
   box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.47);
-  //   overflow-y: scroll;
+  height:calc(100vh - 4.5rem) ;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;  
+  &::-webkit-scrollbar { /* WebKit */
+    width: 0;
+}
 
   &_Data {
     font-size: 14px;
@@ -43,11 +52,32 @@ $bgBorder: #39cdcd18;
       cursor: pointer;
       position: relative;
       margin: 0;
-      border-inline-start: 1px solid black;
+      border-inline-start: 1rem solid $btn;
       background-color: $bgBorder;
       width: 100%;
       padding: 0.7rem 2rem;
       color: $text;
     }
   }
+}
+@media screen and (max-width: 720px) {
+  .menu {
+    &_Data {
+      font-size: 10px;
+    }
+    &_Head {
+      margin: 1rem 0 1rem 0.5rem;
+    }
+    &_Body {
+      margin-left: 1rem;
+  
+      &_Content{
+          display: none;
+      }
+      &:hover {
+        
+        padding: 0.5rem 1rem;
+      }
+    }
+ }
 }

@@ -9,7 +9,7 @@ const SideBar = () => {
         
         {CustomersSideBarData.map((item,index)=>{
           return(
-            <div className='menu_Data'>
+            <div key={index} className='menu_Data'>
               <div className='menu_Head'>
               <p>{item.head}</p>
 
