@@ -1,6 +1,6 @@
 import React from 'react'
 import "./NavBar.scss"
-import Logo from "../../img/Union.png"
+import Logo from "../../img/logo.png"
 import Profile from "../../img/avatar.png"
 
 const NavBar = () => {
